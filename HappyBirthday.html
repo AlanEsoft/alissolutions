@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Meu Amor!</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #ffe6f7; /* Um rosa suave */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff0f5; /* Um tom de rosa mais claro */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        #imgWe {
+            display: block; /* Para remover qualquer comportamento inline padrão */
+            margin-left: auto;
+            margin-right: auto; /* Centraliza horizontalmente dentro da div pai */
+            margin-top: 0; /* Alinha ao topo da div pai */
+            max-width: 90%; /* Garante que a imagem não ultrapasse a largura da tela do celular */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        h1 {
+            color: #e91e63; /* Um rosa vibrante */
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        p {
+            color: #757575;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .special-text {
+            color: #ff4081; /* Outro tom de rosa */
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        button {
+            background-color: #ff80ab; /* Um rosa mais quente */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #f50057; /* Um rosa mais escuro ao passar o mouse */
+        }
+        #mensagem-especial {
+            margin-top: 20px;
+            font-style: italic;
+            color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id= "imgWe" src="We.png" alt="Nós nos abraçando em meu coração!">
+        <audio src="OnlyYou.mp3" controls>Only You</audio>
+        <h1>Feliz Aniversário, Minha Amada Esposa!</h1>
+        <p>Hoje, o dia é todo seu, assim como todo o meu amor é para você. Cada momento ao seu lado é um presente, e sou grato por cada sorriso, cada abraço e cada instante que compartilhamos.</p>
+        <p class="special-text">Você ilumina a minha vida de uma forma que as palavras não conseguem expressar.</p>
+        <button id="botao-surpresa">Clique para uma Mensagem Especial</button>
+        <p id="mensagem-especial" style="display: none;"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const botaoSurpresa = document.getElementById('botao-surpresa');
+            const mensagemEspecial = document.getElementById('mensagem-especial');
+            const mensagens = [
+                "Você é a melodia da minha canção.",
+                "Meu amor por você floresce a cada dia.",
+                "Seu sorriso é o meu sol particular.",
+                "Com você, cada dia é especial.",
+                "Meu coração bate mais forte por você."
+            ];
+
+            botaoSurpresa.addEventListener('click', function() {
+                const mensagemAleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
+                mensagemEspecial.textContent = mensagemAleatoria;
+                mensagemEspecial.style.display = 'block';
+                botaoSurpresa.style.display = 'none'; // Oculta o botão após o clique
+            });
+        });
+    </script>
+</body>
+</html>
