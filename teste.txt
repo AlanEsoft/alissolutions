@@ -1,0 +1,3 @@
+{"nome": "João", "idade": 30}
+{"cidade": "São Paulo", "pais": "Brasil"}
+{"produto": "Laptop", "preco": 1200}

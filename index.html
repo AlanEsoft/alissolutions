@@ -3,50 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>ALIS Solutions & Technology</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Leitura e Gravação de Arquivos</title>
 </head>
 <body>
-    <div class="logo">
-        <picture>
-            <source media="(max-width: 767px)" srcset="imagens/LogoALIS_Tec90.png">
-            <source media="(min-width: 768px)" srcset="imagens/LogoALIS_Tec.png">
-            <img class="imglogo" src="imagens/LogoALIS_Tec.png" alt="Logo da ALIS">
-        </picture>
-        <img class="imgzap" src="imagens/QRcode_ALISzap.png" alt="QRcode para coversar com ALIS">
-    </div>
-    <div class="servicos">
-        <h1 class="titulodiv">SERVIÇOS</h1>
-        <picture class="imgServices">
-            <source media="(max-width: 767px)" srcset="imagens/data_analytics304.png">
-            <source media="(min-width: 768px)" srcset="imagens/data_analytics.png">
-            <img src="imagens/data_analytics.png" alt="Ícones dos serviços da ALIS">
-        </picture>
-        <div class="botoes">
-            <button class="btn" data-index="0"></button>
-            <button class="btn" data-index="1"></button>
-            <button class="btn" data-index="2"></button>
-            <button class="btn" data-index="3"></button>
-            <button class="btn" data-index="4"></button>
-        </div>
-        <div>
-            <h2 class="titulo">ANÁLISE DE DADOS E ENGENHARIA DE SOLUÇÕES</h2>
-            <p class="descricao">
-                Análise dos processos e edição de documentos, cadastros, banco de dados,
-                planilhas, softwares entre outras ferramentas para aumentar lucros e reduzir custos.
-            </p>
-        </div>
-    </div>
-    <div class="bottomlinks">
-        <a href="projetos.html">PROJETOS</a>
-        <a href="contato.html">CONTATO</a>
-        <a href="pagina3.html">QUEM SOMOS</a>
-        <a href="HappyBirthday.html">FELIZ ANIVERSÁRIO</a>
-    </div>
-    <script src="script.js"></script>
+    <input type="file" id="arquivoInput">
+    <button onclick="lerArquivo()">Ler Arquivo</button>
+    <br><br>
+    <textarea id="conteudoArquivo" rows="10" cols="50"></textarea>
+    <br>
+    <button onclick="salvarArquivo()">Salvar Arquivo</button>
+    <div id="objetosJSON"></div>
+
+    <script src="script.js"></script>   
 </body>
-<footer>
-    <h4>© ALIS - 2024</h4>
-</footer>
 </html>
