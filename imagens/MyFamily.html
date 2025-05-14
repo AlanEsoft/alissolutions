@@ -9,6 +9,7 @@
 <body>
     <main>
         <img id="logo" src="logo_myFamily.png" alt="Logo de My Family">
+        <h1 style="font-weight: bold; font-size: 18px;">CARING MY FAMILY</h1>
         <div id="login">
            <form>
                 <p><input type="text" name="Nome" id="idNome" class="inputLogin" placeholder="Digite seu nome..." required></p>
@@ -17,14 +18,39 @@
            </form>
         </div>
         <div id="menu">
-            <a href="">
+            <button id="btnOrcamento" onclick="orcamentoOpen()">
                 <img src="Budget.png" alt="Opção1: Orçamento" class="menuOpcao">
-            </a>
-            <a href="">
+            </button>
+            <button id="btnListaCompras" onclick="listaComprasOpen()">
                 <img src="ShoppingList.png" alt="Opção2: Lista de Compras" class="menuOpcao">
-            </a>
+            </button>
+        </div>
+        <div id="divListaCompras">
+            <header>
+                <h1 style="font-weight: bold; font-size: 15px;">LISTA DE COMPRAS</h1>
+            </header>
+            <section>
+                <div id="entradas">
+                    <label for="produto">PRODUTO</label>
+                    <input type="text" name="produto" id="produto"><br>
+                    <label for="quantidade">QUANTIDADE</label>
+                    <input type="number" name="quantidade" id="quantidade"><br>
+                    <label for="preco">PREÇO</label>
+                    <input type="number" name="preco" id="preco">
+                    <button style="margin-top: 5px;" onclick="addItemCompras()">Adicionar</button>
+                </div>
+                <div id="lista">
+                    <ol>
+
+                    </ol>
+                </div>
+                <div id="total"></div>    
+            </section>
         </div>
     </main>
     <script src="script_myFamily.js"></script>    
 </body>
+<footer>
+    <p>&#169 All Rigths Reserved by ALIS Solutions & Technology</p>
+</footer>
 </html>
