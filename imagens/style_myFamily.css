@@ -67,7 +67,7 @@ input.inputlogin {
 button{
     cursor: pointer;
 }
-div#divListaCompras {
+#divListaCompras {
     display: none;
 }
 div#entradas {
