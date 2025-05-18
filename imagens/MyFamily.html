@@ -36,24 +36,24 @@
                 <div id="menuListaCompras">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
                         <button onclick="menuOpen()" class="btnVoltar">⏪</button>
-                        <button onclick="apagarList()" style="font-size: 30px;">🗑</button>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
                         <button onclick="saveList()" style="font-size: 20px;">💾</button>
+                        <button onclick="listSearch()" style="font-size: 20px;">🔍</button>
+                        <button onclick="apagarList()" style="font-size: 20px; width: 40px;">🗑</button>
+                    </div>
+                    <div style="display: block; text-align: center; margin-bottom: 5px;"> 
                         <select name="listDate" id="listDate" style="border-radius: 3px;">
                             <option id="opListDate" value="Selecione">Data da lista</option>
-                        </select>
-                        <button onclick="listSearch()" style="font-size: 20px;">🔍</button>
+                        </select> 
                     </div>
                 </div>
                 <div id="entradas">
                     <label for="produto">PRODUTO</label>
-                    <input type="text" name="produto" id="produto"><br>
+                    <input type="text" name="produto" id="produto" class="listInputs"><br>
                     <label for="quantidade">QUANTIDADE</label>
-                    <input type="number" name="quantidade" id="quantidade"><br>
+                    <input type="number" name="quantidade" id="quantidade" class="listInputs"><br>
                     <label for="preco">PREÇO</label>
-                    <input type="number" name="preco" id="preco">
-                    <button style="margin-top: 5px;" onclick="addItemCompras()">🛒 Adicionar</button>
+                    <input type="number" name="preco" id="preco" class="listInputs">
+                    <button style="margin-top: 5px; font-size: 18px;" onclick="addItemCompras()" class="listInputs">🛒 Adicionar</button>
                 </div>
                 <div id="lista">
                     <ol>

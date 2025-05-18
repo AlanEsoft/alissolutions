@@ -1,9 +1,10 @@
+/*----------------- Estilos Gerais ---------------------*/
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     background-color: blueviolet;
     align-content: center;
 }
-
 main {
     background-color: rgb(246, 187, 246);
     padding: 10px;
@@ -21,6 +22,7 @@ button{
     font-size: 20px;
     left: 5px; 
 }
+/*----------------- Estilos Login ---------------------*/
 #login {
     display: block;
     margin-top: 10px;
@@ -43,6 +45,7 @@ button{
 input.inputlogin {
     max-width: 120px;
 }
+/*----------------- Estilos MainMenu ---------------------*/
 #menu {
     display: none;
     margin-top: 10px;
@@ -67,6 +70,7 @@ input.inputlogin {
     background-color: blueviolet;
     border-radius: 10px;
 }
+/*----------------- Estilos Lista de Compras ---------------------*/
 #divListaCompras {
     display: none;
 }
@@ -77,7 +81,7 @@ input.inputlogin {
     padding: 5px;
     box-shadow: 5px;
     border: 3px;
-    border-color: black;
+    border-radius: 5px;
     margin: auto;
     margin-bottom: 5px; 
 }
@@ -88,6 +92,12 @@ div#entradas {
     margin: auto;
     background-color: rgb(251, 233, 236);
     border-radius: 5px;
+}
+.listInputs {
+    margin: auto;
+    width: 70%;
+    border-radius: 5px;
+    text-align: center;
 }
 div#total {
             text-align: center;
