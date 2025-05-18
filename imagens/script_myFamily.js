@@ -64,6 +64,7 @@ function listaComprasOpen() {
     opListDate.id = 'opListDate';
     listDate.appendChild(opListDate);
     idListSearch = Number(arraySequenceList[0].id)+1;
+    contador = 1;
     arrayShoppingList.forEach(item => {
         // Cria um novo elemento <option>
         const option = document.createElement("option");
@@ -300,14 +301,20 @@ function saveList() {
 
 // ---------------------------- Apagar a lista selecionada -----------------------------
 function apagarList() {
-    for (let i=0; i<arrayItemList.length; i++){
+    let i = 0;
+    while(i<arrayItemList.length){
         if (arrayItemList[i].id_list == idListSearch) {
             arrayItemList.splice(i, 1);
-        }
+        }else {
+            i++;
+        } 
     }
-    for (let i=0; i<arrayShoppingList.length; i++){
+    i= 0;
+    while (i<arrayShoppingList.length){
         if (arrayShoppingList[i].id_list == idListSearch) {
             arrayShoppingList.splice(i, 1);
+        }else {
+            i++;
         }
     }
     menuOpen();
