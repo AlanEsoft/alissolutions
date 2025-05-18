@@ -18,11 +18,14 @@
            </form>
         </div>
         <div id="menu">
-            <button id="btnOrcamento" onclick="orcamentoOpen()">
+            <button id="btnOrcamento" onclick="orcamentoOpen()" class="btnMenu">
                 <img src="Budget.png" alt="Opção1: Orçamento" class="menuOpcao">
             </button>
-            <button id="btnListaCompras" onclick="listaComprasOpen()">
+            <button id="btnListaCompras" onclick="listaComprasOpen()" class="btnMenu">
                 <img src="ShoppingList.png" alt="Opção2: Lista de Compras" class="menuOpcao">
+            </button>
+            <button onclick="salvarArraysEmTXT()" class="btnMenu">
+                <img src="saveButton_myFamily.png" alt="Salvar" class="menuOpcao">
             </button>
         </div>
         <div id="divListaCompras">
@@ -30,6 +33,19 @@
                 <h1 style="font-weight: bold; font-size: 15px;">LISTA DE COMPRAS</h1>
             </header>
             <section>
+                <div id="menuListaCompras">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                        <button onclick="menuOpen()" class="btnVoltar">⏪</button>
+                        <button onclick="apagarList()" style="font-size: 30px;">🗑</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                        <button onclick="saveList()" style="font-size: 20px;">💾</button>
+                        <select name="listDate" id="listDate" style="border-radius: 3px;">
+                            <option id="opListDate" value="Selecione">Data da lista</option>
+                        </select>
+                        <button onclick="listSearch()" style="font-size: 20px;">🔍</button>
+                    </div>
+                </div>
                 <div id="entradas">
                     <label for="produto">PRODUTO</label>
                     <input type="text" name="produto" id="produto"><br>

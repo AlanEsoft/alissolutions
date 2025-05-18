@@ -14,6 +14,13 @@ main {
 #logo {
     padding: 5px;
 }
+button{
+    cursor: pointer;
+}
+.btnVoltar {
+    font-size: 20px;
+    left: 5px; 
+}
 #login {
     display: block;
     margin-top: 10px;
@@ -56,19 +63,23 @@ input.inputlogin {
     max-width: 100px;
     height: auto;
 }
-#btnOrcamento {
+.btnMenu {
     background-color: blueviolet;
     border-radius: 10px;
-}
-#btnListaCompras {
-    background-color: blueviolet;
-    border-radius: 10px;
-}
-button{
-    cursor: pointer;
 }
 #divListaCompras {
     display: none;
+}
+#menuListaCompras {
+    display: grid;
+    max-width: 60%;
+    background-color: rgb(251, 233, 236);
+    padding: 5px;
+    box-shadow: 5px;
+    border: 3px;
+    border-color: black;
+    margin: auto;
+    margin-bottom: 5px; 
 }
 div#entradas {
     display: grid;
