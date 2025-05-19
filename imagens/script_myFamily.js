@@ -262,6 +262,8 @@ function listSearch(){
     produtos = [];
     quantidades = [];
     precos = [];
+    document.querySelector("#lista ol").innerHTML= '';
+    total.innerText = '';
     for (let i=0; i< arrayItemList.length; i++){
         if (arrayItemList[i].id_list == selectListDate){
             produtos.push(arrayItemList[i].produto)
