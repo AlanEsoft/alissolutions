@@ -4,6 +4,10 @@ let arrayPeople = [];
 let arrayShoppingList = [];
 let arrayItemList = [];
 let arraySequenceList = [];
+let arraySequenceBudget = [];
+let arrayReceita = [];
+let arrayDespesa = [];
+let arrayPlanilha = [];
 let idListSearch;
 // -----------------------------------------------------------------------------------------
 
@@ -180,7 +184,8 @@ function editarItemCompras(id) {
         if (resposta == 'QUANTIDADE' || resposta == 'quantidade'){
             resposta = Number(window.prompt('Digite a quantidade desejada:', '1'))
             quantidades[id-1] = resposta
-            itemEdit.textContent = `${resposta} ${produtos[id-1]} a R$ ${precos[id-1]} cada.`
+            itemEdit.textContent = `${resposta} ${produtos[id-1]} a R$ ${precos[id-1]}.`
+            itemEdit.appendChild(btnItem)
             for (let i=0; i<arrayItemList.length; i++){
                 if (arrayItemList[i].contador == id & arrayItemList[i].id_list == idListSearch) {
                     arrayItemList[i].quantidade = resposta;
@@ -191,9 +196,10 @@ function editarItemCompras(id) {
         }
         else {
             if (resposta == 'PREÇO' || resposta == 'preço') {
-                resposta = Number(window.prompt('Digite o preço atualizado:', '1,0'))
+                resposta = Number(window.prompt('Digite o preço atualizado:', '1.5'))
                 precos[id-1] = resposta
-                itemEdit.textContent = `${quantidades[id-1]} ${produtos[id-1]} a R$ ${resposta} cada.`
+                itemEdit.textContent = `${quantidades[id-1]} ${produtos[id-1]} a R$ ${resposta}.`
+                itemEdit.appendChild(btnItem)
                 for (let i=0; i<arrayItemList.length; i++){
                 if (arrayItemList[i].contador == id & arrayItemList[i].id_list == idListSearch) {
                     arrayItemList[i].preco = resposta;
@@ -236,7 +242,8 @@ function addItemCompras(){
             editarItemCompras(btnEdit.id);
         };
         document.querySelector("#lista ol").appendChild(item)
-        document.querySelector("#lista ol").appendChild(btnEdit)
+        item.appendChild(btnEdit)
+        //document.querySelector("#lista ol").appendChild(btnEdit)
         let valorTotal = somarItemCompras()
         total.innerText = `O total é R$ ${valorTotal}`
         let agora = new Date();
@@ -279,7 +286,8 @@ function listSearch(){
                 editarItemCompras(btnEdit.id);
             };
             document.querySelector("#lista ol").appendChild(item)
-            document.querySelector("#lista ol").appendChild(btnEdit)
+            //document.querySelector("#lista ol").appendChild(btnEdit)
+            item.appendChild(btnEdit)
             let valorTotal = somarItemCompras()
             total.innerText = `O total é R$ ${valorTotal}`
         }
