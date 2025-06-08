@@ -235,6 +235,7 @@ function addItemCompras(){
         const item = document.createElement('li')
         item.textContent = `${quantidade.value} ${produto.value} a R$ ${preco.value}.`
         item.id = `item${contador}`
+        item.style = "display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;"
         const btnEdit = document.createElement('button')
         btnEdit.textContent = `🔄`
         btnEdit.id = `${contador}`
@@ -279,6 +280,7 @@ function listSearch(){
             const item = document.createElement('li')
             item.textContent = `${arrayItemList[i].quantidade} ${arrayItemList[i].produto} a R$ ${arrayItemList[i].preco}.`
             item.id = `item${arrayItemList[i].contador}`
+            item.style = "display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;"
             const btnEdit = document.createElement('button')
             btnEdit.textContent = `🔄`
             btnEdit.id = `${arrayItemList[i].contador}`
